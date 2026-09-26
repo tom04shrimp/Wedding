@@ -1,92 +1,1064 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 25.0px 'Zapf Dingbats'; color: #681328; color: rgba(104, 19, 40, 0.15); -webkit-text-stroke: rgba(104, 19, 40, 0.15)}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px 'Zapf Dingbats'; color: #681328; color: rgba(104, 19, 40, 0.15); -webkit-text-stroke: rgba(104, 19, 40, 0.15)}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Zapf Dingbats'; color: #681328; color: rgba(104, 19, 40, 0.15); -webkit-text-stroke: rgba(104, 19, 40, 0.15)}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 19.0px 'Helvetica Neue'; color: #aa8948; -webkit-text-stroke: #aa8948}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px 'Hiragino Sans'; color: #6e6358; -webkit-text-stroke: #6e6358}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 14.0px 'Zapf Dingbats'; color: #aa8948; -webkit-text-stroke: #aa8948}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px 'Helvetica Neue'; color: #193a2c; -webkit-text-stroke: #193a2c}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #796e63; -webkit-text-stroke: #796e63}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px 'Hiragino Sans'; color: #681328; -webkit-text-stroke: #681328}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Hiragino Sans'; color: #aa8948; -webkit-text-stroke: #aa8948}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Hiragino Sans'; color: #4b443d; -webkit-text-stroke: #4b443d}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Hiragino Sans'; color: #796e63; -webkit-text-stroke: #796e63}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #312c28; -webkit-text-stroke: #312c28}
-    span.s1 {font-kerning: none; background-color: #fffdf6}
-    span.s2 {font: 14.0px 'Hiragino Sans'; font-kerning: none; background-color: #fffdf6}
-    span.s3 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #312c28; background-color: #fffdf6; -webkit-text-stroke: 0px #312c28}
-    span.s4 {font: 11.0px 'Hiragino Sans'; font-kerning: none; color: #796e63; background-color: #efeae0; -webkit-text-stroke: 0px #796e63}
-    span.s5 {font-kerning: none; background-color: #efeae0}
-    span.s6 {font: 11.0px 'Helvetica Neue'; font-kerning: none; background-color: #fffdf6}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Wedding Cocktail Menu</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+:root {
+  --wine: #7c2639;
+  --green: #234c3c;
+  --gold: #b79a61;
+  --paper: #fffdf8;
+  --ink: #443d36;
+  --muted: #81766b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Serif JP", serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(35, 76, 60, .06) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(124, 38, 57, .06) 0 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      135deg,
+      #eee7db,
+      #f8f4ec 48%,
+      #ebe4d8
+    );
+}
+
+/* =========================
+   全体
+========================= */
+
+.page {
+  width: min(920px, calc(100% - 28px));
+  margin: 28px auto;
+  padding: 62px 68px 54px;
+  position: relative;
+  overflow: hidden;
+
+  background: var(--paper);
+
+  border: 1px solid rgba(183, 154, 97, .65);
+
+  box-shadow:
+    0 18px 50px rgba(67, 50, 35, .14);
+}
+
+/* 内側のゴールド枠 */
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+
+  border: 1px solid rgba(183, 154, 97, .35);
+
+  pointer-events: none;
+}
+
+/* =========================
+   クリスマス装飾
+   ※画像は使用していません
+========================= */
+
+.decor {
+  position: absolute;
+  z-index: 0;
+
+  pointer-events: none;
+
+  color: var(--green);
+}
+
+.decor.top-left {
+  top: 24px;
+  left: 28px;
+  font-size: 25px;
+}
+
+.decor.top-right {
+  top: 29px;
+  right: 32px;
+  color: var(--wine);
+  font-size: 21px;
+}
+
+.decor.bottom-left {
+  bottom: 26px;
+  left: 34px;
+  color: var(--wine);
+  font-size: 18px;
+}
+
+.decor.bottom-right {
+  bottom: 24px;
+  right: 31px;
+  font-size: 25px;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-bottom: 39px;
+}
+
+.eyebrow {
+  color: var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  letter-spacing: .23em;
+
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 7px 0 4px;
+
+  color: var(--wine);
+
+  font-family:
+    "Cormorant Garamond",
+    "Noto Serif JP",
+    serif;
+
+  font-size: 56px;
+
+  font-weight: 500;
+
+  letter-spacing: .07em;
+
+  line-height: 1;
+}
+
+.subtitle {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  letter-spacing: .13em;
+}
+
+/* ヘッダーの飾り線 */
+
+.ornament {
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--gold);
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+
+  width: 110px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold)
+    );
+}
+
+.ornament::after {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      var(--gold)
+    );
+}
+
+/* =========================
+   セクション
+========================= */
+
+.section {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 34px;
+}
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0 0 17px;
+
+  color: var(--green);
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: .12em;
+}
+
+.section-title::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(183, 154, 97, .7),
+      transparent
+    );
+}
+
+/* =========================
+   各メニュー
+========================= */
+
+.menu-item {
+  display: grid;
+
+  grid-template-columns: 138px 1fr;
+
+  gap: 21px;
+
+  align-items: center;
+
+  padding: 16px 0;
+
+  border-bottom:
+    1px solid rgba(183, 154, 97, .23);
+}
+
+.menu-item:last-child {
+  border-bottom: 0;
+}
+
+/* =========================
+   ドリンク写真
+========================= */
+
+.drink-photo {
+  width: 138px;
+  height: 112px;
+
+  border:
+    1px solid rgba(183, 154, 97, .65);
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  background: #f1ede4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+/*
+  実際のドリンク写真を入れる場合
+  <img> を入れるだけでOKです。
+*/
+
+.drink-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* 写真をまだ入れていない時 */
+
+.photo-placeholder {
+  color: #93897e;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  padding: 12px;
+}
+
+/* 写真スペース下部の小さな文字 */
+
+.drink-photo::after {
+  content: "DRINK PHOTO";
+
+  position: absolute;
+
+  bottom: 7px;
+
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: rgba(68, 61, 54, .4);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 10px;
+
+  letter-spacing: .18em;
+}
+
+/* =========================
+   ドリンク名
+========================= */
+
+.name-row {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 6px;
+}
+
+.name {
+  color: var(--wine);
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  letter-spacing: .04em;
+}
+
+/* 甘口・さっぱり等 */
+
+.taste {
+  color: var(--gold);
+
+  border:
+    1px solid rgba(183, 154, 97, .55);
+
+  border-radius: 20px;
+
+  padding: 2px 9px;
+
+  font-size: 10px;
+
+  letter-spacing: .08em;
+
+  white-space: nowrap;
+}
+
+/* 説明文 */
+
+.description {
+  color: #5e564e;
+
+  font-size: 13px;
+
+  line-height: 2;
+
+  letter-spacing: .025em;
+}
+
+/* =========================
+   フッター
+========================= */
+
+.footer {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 32px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(183, 154, 97, .4);
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  letter-spacing: .12em;
+}
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media (max-width: 650px) {
+
+  .page {
+    width: calc(100% - 14px);
+
+    margin: 7px auto;
+
+    padding:
+      45px
+      23px
+      42px;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .menu-item {
+    grid-template-columns: 96px 1fr;
+
+    gap: 13px;
+  }
+
+  .drink-photo {
+    width: 96px;
+    height: 88px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   印刷用
+========================= */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .page {
+    width: 100%;
+
+    margin: 0;
+
+    box-shadow: none;
+  }
+}
+</style>
 </head>
+
+
 <body>
-<p class="p1"><span class="s1">✦</span></p>
-<p class="p2"><span class="s1">❄</span></p>
-<p class="p3"><span class="s1">✧</span></p>
-<p class="p1"><span class="s1">❄</span></p>
-<p class="p4"><span class="s1">CHRISTMAS WEDDING</span></p>
-<h1 style="margin: 0.0px 0.0px 2.0px 0.0px; text-align: center; font: 54.0px 'Helvetica Neue'; color: #681328; -webkit-text-stroke: #681328"><span class="s1">Cocktail Menu</span></h1>
-<p class="p6"><span class="s1">聖なる夜に、ふたりの門出を祝う一杯を。</span></p>
-<p class="p7"><span class="s1">❧</span><span class="s2">　</span><span class="s1">✦</span><span class="s2">　</span><span class="s1">❧</span></p>
-<p class="p8"><span class="s1">Cocktail</span><span class="s3"> </span><span class="s4">画像スペース</span></p>
-<p class="p9"><span class="s5">Violet Fizz</span></p>
-<p class="p10"><span class="s1">バイオレットフィズ</span></p>
-<p class="p11"><span class="s1">さっぱり</span></p>
-<p class="p12"><span class="s1">すみれのような香りと色合いに、ジンの引き締まった味わいのカクテル</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Sea Breeze</span></p>
-<p class="p10"><span class="s1">シーブリーズ</span></p>
-<p class="p11"><span class="s1">さっぱり</span></p>
-<p class="p12"><span class="s1">グレープフルーツとクランベリーの、さっぱりと甘いカクテル</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">English Rose</span></p>
-<p class="p10"><span class="s1">イングリッシュローズ</span></p>
-<p class="p11"><span class="s1">甘口</span></p>
-<p class="p12"><span class="s1">薔薇の華やかな香りと甘みが、大人にぴったりなカクテル</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Gin &amp; Tonic</span></p>
-<p class="p10"><span class="s1">ジントニック</span></p>
-<p class="p11"><span class="s1">やや辛口</span></p>
-<p class="p12"><span class="s1">すっきりとした苦味と、爽快な香り</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Eternal</span></p>
-<p class="p10"><span class="s1">エターナル　永遠のふたり</span></p>
-<p class="p11"><span class="s1">さっぱり</span></p>
-<p class="p12"><span class="s1">白ワインの微炭酸で、爽やかな味わいのカクテル</span></p>
-<p class="p8"><span class="s1">Non-Alcoholic Cocktail</span><span class="s3"> </span><span class="s4">画像スペース</span></p>
-<p class="p9"><span class="s5">Almond &amp; Milk</span></p>
-<p class="p10"><span class="s1">アーモンドとミルクのマリアージュ</span></p>
-<p class="p11"><span class="s1">超甘口</span></p>
-<p class="p12"><span class="s1">アーモンドとミルクを使った杏仁ミルク風カクテル。デザート気分にぴったり</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Tiara</span></p>
-<p class="p10"><span class="s1">ティアラ</span></p>
-<p class="p11"><span class="s1">さっぱり</span></p>
-<p class="p12"><span class="s1">見た目が綺麗な、シャンパン風白ブドウのジュース</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Honey Stone</span></p>
-<p class="p10"><span class="s1">ハニーストーン</span></p>
-<p class="p11"><span class="s1">超甘口</span></p>
-<p class="p12"><span class="s1">パイナップルとパッションフルーツのトロピカルドリンク</span></p>
-<p class="p13"><span class="s5">画像スペース</span></p>
-<p class="p9"><span class="s5">Floral Village</span></p>
-<p class="p10"><span class="s1">フローラルビレッジ</span></p>
-<p class="p11"><span class="s1">さっぱり</span></p>
-<p class="p12"><span class="s1">レモンの爽やかな酸味のカクテル</span></p>
-<p class="p13"><span class="s5">｀画像スペース</span></p>
-<p class="p9"><span class="s5">Framboise</span></p>
-<p class="p10"><span class="s1">フランボワーズのホットカクテル</span></p>
-<p class="p11"><span class="s6">HOT</span><span class="s1">・やや甘口</span></p>
-<p class="p12"><span class="s1">ラズベリーの果実を使った、温かく甘酸っぱいカクテル</span></p>
-<p class="p14"><span class="s1">May your Christmas be filled with love, joy &amp; beautiful memories.</span></p>
+
+<main class="page">
+
+  <!--
+    クリスマス装飾
+    画像は使用していません
+  -->
+
+  <div class="decor top-left">
+    ✦ ❄
+  </div>
+
+  <div class="decor top-right">
+    ❧ ✧
+  </div>
+
+  <div class="decor bottom-left">
+    ✧ ❄
+  </div>
+
+  <div class="decor bottom-right">
+    ❄ ✦
+  </div>
+
+
+  <!-- =========================
+       タイトル
+  ========================== -->
+
+  <header>
+
+    <div class="eyebrow">
+      Christmas Wedding
+    </div>
+
+    <h1>
+      Cocktail Menu
+    </h1>
+
+    <div class="subtitle">
+      聖なる夜に、ふたりの門出を祝う一杯を。
+    </div>
+
+    <div class="ornament">
+      <span>❧　✦　❧</span>
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       カクテル
+  ========================== -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Cocktail
+    </h2>
+
+
+    <!-- バイオレットフィズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          写真を入れる場合はこちら：
+
+          <img
+            src="images/violet-fizz.jpg"
+            alt="バイオレットフィズ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            バイオレットフィズ
+          </div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          すみれのような香りと色合いに、
+          ジンの引き締まった味わいのカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- シーブリーズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/sea-breeze.jpg"
+            alt="シーブリーズ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            シーブリーズ
+          </div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          グレープフルーツとクランベリーの、
+          さっぱりと甘いカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- イングリッシュローズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/english-rose.jpg"
+            alt="イングリッシュローズ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            イングリッシュローズ
+          </div>
+
+          <div class="taste">
+            甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          薔薇の華やかな香りと甘みが、
+          大人にぴったりなカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ジントニック -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/gin-tonic.jpg"
+            alt="ジントニック"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            ジントニック
+          </div>
+
+          <div class="taste">
+            やや辛口
+          </div>
+
+        </div>
+
+        <div class="description">
+          すっきりとした苦味と、
+          爽快な香り
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- エターナル -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/eternal.jpg"
+            alt="エターナル 永遠のふたり"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            エターナル　永遠のふたり
+          </div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          白ワインの微炭酸で、
+          爽やかな味わいのカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =========================
+       ノンアルコール
+  ========================== -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Non-Alcoholic Cocktail
+    </h2>
+
+
+    <!-- アーモンドとミルク -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/almond-milk.jpg"
+            alt="アーモンドとミルクのマリアージュ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            アーモンドとミルクのマリアージュ
+          </div>
+
+          <div class="taste">
+            超甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          アーモンドとミルクを使った
+          杏仁ミルク風カクテル。
+          デザート気分にぴったり
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ティアラ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/tiara.jpg"
+            alt="ティアラ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            ティアラ
+          </div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          見た目が綺麗な、
+          シャンパン風白ブドウのジュース
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ハニーストーン -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/honey-stone.jpg"
+            alt="ハニーストーン"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            ハニーストーン
+          </div>
+
+          <div class="taste">
+            超甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          パイナップルとパッションフルーツの
+          トロピカルドリンク
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- フローラルビレッジ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/floral-village.jpg"
+            alt="フローラルビレッジ"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            フローラルビレッジ
+          </div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          レモンの爽やかな酸味のカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- フランボワーズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+        <!--
+          <img
+            src="images/framboise-hot.jpg"
+            alt="フランボワーズのホットカクテル"
+          >
+        -->
+
+        <div class="photo-placeholder">
+          ここに<br>
+          ドリンク写真
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name">
+            フランボワーズのホットカクテル
+          </div>
+
+          <div class="taste">
+            HOT・やや甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          ラズベリーの果実を使った、
+          温かく甘酸っぱいカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+
+  <footer class="footer">
+
+    May your Christmas be filled with
+    love, joy &amp; beautiful memories.
+
+    <br>
+
+    <span>
+      — With warmest wishes on your wedding day —
+    </span>
+
+  </footer>
+
+
+</main>
+
 </body>
 </html>
