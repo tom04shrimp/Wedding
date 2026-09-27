@@ -507,6 +507,233 @@ h1 {
     box-shadow: none;
   }
 }
+
+/* =========================
+   Wedding Luxury Popup
+   ========================= */
+
+.name {
+  cursor: pointer;
+  position: relative;
+  transition: color .25s ease, transform .25s ease;
+}
+
+.name::after {
+  content: "VIEW";
+  display: inline-block;
+  margin-left: 9px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 9px;
+  letter-spacing: .18em;
+  vertical-align: middle;
+  opacity: .7;
+  transition: opacity .25s ease;
+}
+
+.name:hover {
+  transform: translateY(-1px);
+}
+
+.name:hover::after {
+  opacity: 1;
+}
+
+.name:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(183,154,97,.12), transparent 32%),
+    rgba(25, 20, 17, .84);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+.image-modal::before,
+.image-modal::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(183,154,97,.65);
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.image-modal::before {
+  top: 7%;
+  left: 8%;
+}
+
+.image-modal::after {
+  right: 8%;
+  bottom: 7%;
+}
+
+.image-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-card {
+  position: relative;
+  width: min(760px, 94vw);
+  max-height: 91vh;
+  overflow: auto;
+  padding: 13px 13px 27px;
+  background:
+    linear-gradient(var(--paper), var(--paper)) padding-box,
+    linear-gradient(135deg, #8e713c, #e3cf9d, #8e713c) border-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.18) inset;
+  text-align: center;
+  transform: translateY(18px) scale(.94);
+  transition: transform .38s cubic-bezier(.2,.8,.2,1);
+}
+
+.modal-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(183,154,97,.32);
+  pointer-events: none;
+}
+
+.image-modal.is-open .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-image-wrap {
+  position: relative;
+  padding: 8px;
+  margin-bottom: 17px;
+}
+
+.modal-image-wrap::before,
+.modal-image-wrap::after {
+  content: "✦";
+  position: absolute;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.modal-image-wrap::before {
+  top: 0;
+  left: 0;
+}
+
+.modal-image-wrap::after {
+  right: 0;
+  bottom: 0;
+}
+
+.modal-image {
+  display: block;
+  width: 100%;
+  max-height: 63vh;
+  object-fit: contain;
+  border: 1px solid rgba(183,154,97,.5);
+  border-radius: 3px;
+  background: #f1ede4;
+  box-shadow: 0 8px 28px rgba(68,61,54,.16);
+}
+
+.modal-ornament {
+  margin: 2px 0 7px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: .3em;
+}
+
+.modal-name {
+  margin-top: 3px;
+  color: var(--wine);
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(22px, 3.2vw, 31px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.modal-description {
+  width: min(570px, 90%);
+  margin: 8px auto 0;
+  color: #5e564e;
+  font-size: clamp(14px, 2vw, 17px);
+  line-height: 2;
+  letter-spacing: .035em;
+}
+
+.modal-close {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 10001;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50%;
+  background: rgba(30,25,20,.42);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(124,38,57,.78);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 650px) {
+  .image-modal {
+    padding: 14px;
+  }
+
+  .modal-card {
+    width: 96vw;
+    max-height: 88vh;
+    padding: 9px 9px 21px;
+  }
+
+  .modal-image {
+    max-height: 55vh;
+  }
+
+  .modal-close {
+    top: 9px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .name::after {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
 </style>
 </head>
 
@@ -587,9 +814,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            バイオレットフィズ
-          </div>
+          <div class="name" role="button" tabindex="0">バイオレットフィズ</div>
 
           <div class="taste">
             さっぱり
@@ -625,9 +850,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            シーブリーズ
-          </div>
+          <div class="name" role="button" tabindex="0">シーブリーズ</div>
 
           <div class="taste">
             さっぱり
@@ -663,9 +886,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            イングリッシュローズ
-          </div>
+          <div class="name" role="button" tabindex="0">イングリッシュローズ</div>
 
           <div class="taste">
             甘口
@@ -701,9 +922,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            ジントニック
-          </div>
+          <div class="name" role="button" tabindex="0">ジントニック</div>
 
           <div class="taste">
             やや辛口
@@ -739,9 +958,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            エターナル　永遠のふたり
-          </div>
+          <div class="name" role="button" tabindex="0">エターナル　永遠のふたり</div>
 
           <div class="taste">
             さっぱり
@@ -790,9 +1007,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            アーモンドとミルクのマリアージュ
-          </div>
+          <div class="name" role="button" tabindex="0">アーモンドとミルクのマリアージュ</div>
 
           <div class="taste">
             超甘口
@@ -829,9 +1044,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            ティアラ
-          </div>
+          <div class="name" role="button" tabindex="0">ティアラ</div>
 
           <div class="taste">
             さっぱり
@@ -867,9 +1080,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            ハニーストーン
-          </div>
+          <div class="name" role="button" tabindex="0">ハニーストーン</div>
 
           <div class="taste">
             超甘口
@@ -905,9 +1116,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            フローラルビレッジ
-          </div>
+          <div class="name" role="button" tabindex="0">フローラルビレッジ</div>
 
           <div class="taste">
             さっぱり
@@ -942,9 +1151,7 @@ h1 {
 
         <div class="name-row">
 
-          <div class="name">
-            フランボワーズのホットカクテル
-          </div>
+          <div class="name" role="button" tabindex="0">フランボワーズのホットカクテル</div>
 
           <div class="taste">
             HOT・やや甘口
@@ -982,7 +1189,98 @@ h1 {
   </footer>
 
 
+
+  <!-- =========================
+       画像・説明の拡大モーダル
+       ========================== -->
+  <div class="image-modal" id="imageModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" type="button" aria-label="閉じる">×</button>
+
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <div class="modal-image-wrap">
+        <img class="modal-image" id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-ornament">✦　❧　✦</div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-description" id="modalDescription"></div>
+    </div>
+  </div>
+
 </main>
+
+
+<script>
+(() => {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalName = document.getElementById("modalName");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalClose = document.getElementById("modalClose");
+
+  function openModal(nameElement) {
+    const item = nameElement.closest(".menu-item");
+    if (!item) return;
+
+    const image = item.querySelector(".drink-photo img");
+    const description = item.querySelector(".description");
+
+    if (!image) return;
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt || nameElement.textContent.trim();
+    modalName.textContent = nameElement.textContent.trim();
+    modalDescription.textContent = description
+      ? description.textContent.replace(/\s+/g, " ").trim()
+      : "";
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".name").forEach((name) => {
+    name.addEventListener("click", () => openModal(name));
+
+    name.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openModal(name);
+      }
+    });
+  });
+
+  // メニュー内の小さい画像をクリックしても拡大表示
+  document.querySelectorAll(".drink-photo img").forEach((image) => {
+    image.style.cursor = "zoom-in";
+    image.addEventListener("click", () => {
+      const item = image.closest(".menu-item");
+      const name = item ? item.querySelector(".name") : null;
+      if (name) openModal(name);
+    });
+  });
+
+  modalClose.addEventListener("click", closeModal);
+
+  // 背景部分をクリックして閉じる
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
