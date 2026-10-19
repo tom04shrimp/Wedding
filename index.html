@@ -564,7 +564,7 @@ h1 {
 
 .image-modal::before,
 .image-modal::after {
-  content: "✦";
+  content: "";
   position: absolute;
   color: rgba(183,154,97,.65);
   font-size: 22px;
@@ -626,7 +626,7 @@ h1 {
 
 .modal-image-wrap::before,
 .modal-image-wrap::after {
-  content: "✦";
+  content: "";
   position: absolute;
   z-index: 2;
   color: var(--gold);
@@ -905,6 +905,55 @@ img {
   }
 }
 
+/* =========================
+   最後の写真スペース
+========================= */
+
+.final-photo-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 38px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(183, 154, 97, .4);
+}
+
+.final-photo-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(183, 154, 97, .65);
+  padding: 7px;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(67, 50, 35, .10);
+}
+
+.final-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 650px) {
+  .final-photo-section {
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+
+  .final-photo-frame {
+    aspect-ratio: 4 / 3;
+    padding: 5px;
+  }
+}
+
+@media print {
+  .final-photo-frame {
+    break-inside: avoid;
+  }
+}
+
+  
 </style>
 </head>
 
@@ -912,28 +961,6 @@ img {
 <body>
 
 <main class="page">
-
-  <!--
-    クリスマス装飾
-    画像は使用していません
-  -->
-
-  <div class="decor top-left">
-    ✦ ❄
-  </div>
-
-  <div class="decor top-right">
-    ❧ ✧
-  </div>
-
-  <div class="decor bottom-left">
-    ✧ ❄
-  </div>
-
-  <div class="decor bottom-right">
-    ❄ ✦
-  </div>
-
 
   <!-- =========================
        タイトル
@@ -949,9 +976,7 @@ img {
       Drink Menu
     </h1>
 
-    <div class="ornament">
-      <span>❧　✦　❧</span>
-    </div>
+    <div class="ornament"></div>
 
   </header>
 
@@ -1453,12 +1478,24 @@ img {
         <img class="modal-image" id="modalImage" src="" alt="">
       </div>
 
-      <div class="modal-ornament">✦　❧　✦</div>
+      <div class="modal-ornament"></div>
       <div class="modal-name" id="modalName"></div>
       <div class="modal-description" id="modalDescription"></div>
     </div>
   </div>
 
+  <!-- =========================
+       最後の写真スペース
+  ========================== -->
+  <section class="final-photo-section">
+    <div class="final-photo-frame">
+      <img
+        src="images/final-photo.jpg"
+        alt="Tomoya & Yuka Wedding"
+      >
+    </div>
+  </section>
+  
 </main>
 
 
