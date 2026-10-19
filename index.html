@@ -782,11 +782,15 @@ h1 {
 }
 .drink-list-card li strong {
   display: inline-block;
-  min-width: 82px;
+  min-width: 0;
+  margin-right: 8px;
   color: var(--green);
   font-weight: 500;
 }
-.drink-list-card .subitem { padding-left: 12px; }
+
+.drink-list-card .subitem {
+  padding-left: 0;
+}
 .drink-list-card .gift { color: var(--wine); }
 @media (max-width: 650px) {
   .drink-list-grid { grid-template-columns: 1fr; gap: 12px; }
