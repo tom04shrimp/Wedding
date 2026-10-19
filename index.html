@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Wedding Cocktail Menu</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+:root {
+  --wine: #7c2639;
+  --green: #234c3c;
+  --gold: #b79a61;
+  --paper: #fffdf8;
+  --ink: #443d36;
+  --muted: #81766b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Serif JP", serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(35, 76, 60, .06) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(124, 38, 57, .06) 0 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      135deg,
+      #eee7db,
+      #f8f4ec 48%,
+      #ebe4d8
+    );
+}
+
+/* =========================
+   全体
+========================= */
+
+.page {
+  width: min(920px, calc(100% - 28px));
+  margin: 28px auto;
+  padding: 62px 68px 54px;
+  position: relative;
+  overflow: hidden;
+
+  background: var(--paper);
+
+  border: 1px solid rgba(183, 154, 97, .65);
+
+  box-shadow:
+    0 18px 50px rgba(67, 50, 35, .14);
+}
+
+/* 内側のゴールド枠 */
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+
+  border: 1px solid rgba(183, 154, 97, .35);
+
+  pointer-events: none;
+}
+
+/* =========================
+   クリスマス装飾
+   ※画像は使用していません
+========================= */
+
+.decor {
+  position: absolute;
+  z-index: 0;
+
+  pointer-events: none;
+
+  color: var(--green);
+}
+
+.decor.top-left {
+  top: 24px;
+  left: 28px;
+  font-size: 25px;
+}
+
+.decor.top-right {
+  top: 29px;
+  right: 32px;
+  color: var(--wine);
+  font-size: 21px;
+}
+
+.decor.bottom-left {
+  bottom: 26px;
+  left: 34px;
+  color: var(--wine);
+  font-size: 18px;
+}
+
+.decor.bottom-right {
+  bottom: 24px;
+  right: 31px;
+  font-size: 25px;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-bottom: 39px;
+}
+
+.eyebrow {
+  color: var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  letter-spacing: .23em;
+
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 7px 0 4px;
+
+  color: var(--wine);
+
+  font-family:
+    "Cormorant Garamond",
+    "Noto Serif JP",
+    serif;
+
+  font-size: 56px;
+
+  font-weight: 500;
+
+  letter-spacing: .07em;
+
+  line-height: 1;
+}
+
+.subtitle {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  letter-spacing: .13em;
+}
+
+/* ヘッダーの飾り線 */
+
+.ornament {
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--gold);
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+
+  width: 110px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold)
+    );
+}
+
+.ornament::after {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      var(--gold)
+    );
+}
+
+/* =========================
+   セクション
+========================= */
+
+.section {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 34px;
+}
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0 0 17px;
+
+  color: var(--green);
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: .12em;
+}
+
+.section-title::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(183, 154, 97, .7),
+      transparent
+    );
+}
+
+/* =========================
+   各メニュー
+========================= */
+
+.menu-item {
+  display: grid;
+
+  grid-template-columns: 138px 1fr;
+
+  gap: 21px;
+
+  align-items: center;
+
+  padding: 16px 0;
+
+  border-bottom:
+    1px solid rgba(183, 154, 97, .23);
+}
+
+.menu-item:last-child {
+  border-bottom: 0;
+}
+
+/* =========================
+   ドリンク写真
+========================= */
+
+.drink-photo {
+  width: 130px;
+  height: 150px;
+
+  border:
+    1px solid rgba(183, 154, 97, .65);
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  background: #f1ede4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+/*
+  実際のドリンク写真を入れる場合
+  <img> を入れるだけでOKです。
+*/
+
+.drink-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* 写真をまだ入れていない時 */
+
+.photo-placeholder {
+  color: #93897e;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  padding: 12px;
+}
+
+/* 写真スペース下部の小さな文字 */
+
+.drink-photo::after {
+  content: "DRINK PHOTO";
+
+  position: absolute;
+
+  bottom: 7px;
+
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: rgba(68, 61, 54, .4);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 10px;
+
+  letter-spacing: .18em;
+}
+
+/* =========================
+   ドリンク名
+========================= */
+
+.name-row {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 6px;
+}
+
+.name {
+  color: var(--wine);
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  letter-spacing: .04em;
+}
+
+/* 甘口・さっぱり等 */
+
+.taste {
+  color: var(--gold);
+
+  border:
+    1px solid rgba(183, 154, 97, .55);
+
+  border-radius: 20px;
+
+  padding: 2px 9px;
+
+  font-size: 10px;
+
+  letter-spacing: .08em;
+
+  white-space: nowrap;
+}
+
+/* 説明文 */
+
+.description {
+  color: #5e564e;
+
+  font-size: 13px;
+
+  line-height: 2;
+
+  letter-spacing: .025em;
+}
+
+/* =========================
+   フッター
+========================= */
+
+.footer {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 32px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(183, 154, 97, .4);
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  letter-spacing: .12em;
+}
+
+/* =========================
+   スマートフォン
+========================= */
+
+@media (max-width: 650px) {
+
+  .page {
+    width: calc(100% - 14px);
+
+    margin: 7px auto;
+
+    padding:
+      45px
+      23px
+      42px;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .menu-item {
+    grid-template-columns: 96px 1fr;
+
+    gap: 13px;
+  }
+
+  .drink-photo {
+    width: 96px;
+    height: 88px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   印刷用
+========================= */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .page {
+    width: 100%;
+
+    margin: 0;
+
+    box-shadow: none;
+  }
+}
+
+/* =========================
+   Wedding Luxury Popup
+   ========================= */
+
+.name {
+  cursor: pointer;
+  position: relative;
+  transition: color .25s ease, transform .25s ease;
+}
+
+.name::after {
+  content: "VIEW";
+  display: inline-block;
+  margin-left: 9px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 9px;
+  letter-spacing: .18em;
+  vertical-align: middle;
+  opacity: .7;
+  transition: opacity .25s ease;
+}
+
+.name:hover {
+  transform: translateY(-1px);
+}
+
+.name:hover::after {
+  opacity: 1;
+}
+
+.name:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(183,154,97,.12), transparent 32%),
+    rgba(25, 20, 17, .84);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+.image-modal::before,
+.image-modal::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(183,154,97,.65);
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.image-modal::before {
+  top: 7%;
+  left: 8%;
+}
+
+.image-modal::after {
+  right: 8%;
+  bottom: 7%;
+}
+
+.image-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-card {
+  position: relative;
+  width: min(760px, 94vw);
+  max-height: 91vh;
+  overflow: auto;
+  padding: 13px 13px 27px;
+  background:
+    linear-gradient(var(--paper), var(--paper)) padding-box,
+    linear-gradient(135deg, #8e713c, #e3cf9d, #8e713c) border-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.18) inset;
+  text-align: center;
+  transform: translateY(18px) scale(.94);
+  transition: transform .38s cubic-bezier(.2,.8,.2,1);
+}
+
+.modal-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(183,154,97,.32);
+  pointer-events: none;
+}
+
+.image-modal.is-open .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-image-wrap {
+  position: relative;
+  padding: 8px;
+  margin-bottom: 17px;
+}
+
+.modal-image-wrap::before,
+.modal-image-wrap::after {
+  content: "✦";
+  position: absolute;
+  z-index: 2;
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.modal-image-wrap::before {
+  top: 0;
+  left: 0;
+}
+
+.modal-image-wrap::after {
+  right: 0;
+  bottom: 0;
+}
+
+.modal-image {
+  display: block;
+  width: 100%;
+  max-height: 63vh;
+  object-fit: contain;
+  border: 1px solid rgba(183,154,97,.5);
+  border-radius: 3px;
+  background: #f1ede4;
+  box-shadow: 0 8px 28px rgba(68,61,54,.16);
+}
+
+.modal-ornament {
+  margin: 2px 0 7px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: .3em;
+}
+
+.modal-name {
+  margin-top: 3px;
+  color: var(--wine);
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(22px, 3.2vw, 31px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.modal-description {
+  width: min(570px, 90%);
+  margin: 8px auto 0;
+  color: #5e564e;
+  font-size: clamp(14px, 2vw, 17px);
+  line-height: 2;
+  letter-spacing: .035em;
+}
+
+.modal-close {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 10001;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50%;
+  background: rgba(30,25,20,.42);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(124,38,57,.78);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 650px) {
+  .image-modal {
+    padding: 14px;
+  }
+
+  .modal-card {
+    width: 96vw;
+    max-height: 88vh;
+    padding: 9px 9px 21px;
+  }
+
+  .modal-image {
+    max-height: 55vh;
+  }
+
+  .modal-close {
+    top: 9px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .name::after {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+
+/* =========================
+   追加ドリンクリスト
+========================= */
+.drink-list-section { position: relative; z-index: 1; margin-top: 42px; }
+.drink-list-heading {
+  margin: 0 0 20px;
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-align: center;
+}
+.drink-list-heading::after {
+  content: "✦";
+  display: block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: 13px;
+}
+.drink-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.drink-list-card {
+  padding: 19px 20px;
+  border: 1px solid rgba(183,154,97,.42);
+  background: rgba(255,255,255,.48);
+}
+.drink-list-card h3 {
+  margin: 0 0 13px;
+  padding-bottom: 8px;
+  color: var(--wine);
+  border-bottom: 1px solid rgba(183,154,97,.35);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .06em;
+}
+.drink-list-card ul { list-style: none; margin: 0; padding: 0; }
+.drink-list-card li {
+  margin: 0;
+  padding: 5px 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.drink-list-card li strong {
+  display: inline-block;
+  min-width: 82px;
+  color: var(--green);
+  font-weight: 500;
+}
+.drink-list-card .subitem { padding-left: 12px; }
+.drink-list-card .gift { color: var(--wine); }
+@media (max-width: 650px) {
+  .drink-list-grid { grid-template-columns: 1fr; gap: 12px; }
+  .drink-list-card { padding: 16px; }
+  .drink-list-heading { font-size: 19px; }
+}
+
+
+/* =========================
+   Responsive layout tuning
+   PC・タブレット・スマートフォンに自動対応
+========================= */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+img {
+  max-width: 100%;
+}
+.page {
+  width: min(920px, calc(100% - 32px));
+}
+.drink-list-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 1100px) {
+  .page {
+    width: min(1000px, calc(100% - 64px));
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}
+@media (min-width: 651px) and (max-width: 900px) {
+  .page {
+    width: calc(100% - 28px);
+    padding: 48px 38px 44px;
+  }
+  h1 {
+    font-size: clamp(38px, 6vw, 52px);
+  }
+  .menu-item {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 18px;
+  }
+  .drink-photo {
+    width: 112px;
+    height: 126px;
+  }
+}
+@media (max-width: 650px) {
+  .page {
+    width: calc(100% - 16px);
+    margin: 8px auto;
+    padding: 44px 20px 38px;
+  }
+  header {
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(32px, 9vw, 43px);
+    overflow-wrap: anywhere;
+  }
+  .eyebrow {
+    font-size: 15px;
+    letter-spacing: .16em;
+  }
+  .section {
+    margin-top: 27px;
+  }
+  .menu-item {
+    grid-template-columns: minmax(76px, 30%) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+  .drink-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.05;
+  }
+  .name-row {
+    gap: 6px;
+  }
+  .name {
+    overflow-wrap: anywhere;
+    line-height: 1.65;
+  }
+  .description {
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+  }
+  .drink-list-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .drink-list-card li {
+    overflow-wrap: anywhere;
+  }
+  .footer {
+    font-size: 10px;
+    letter-spacing: .06em;
+  }
+}
+@media (max-width: 380px) {
+  .page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu-item {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .name {
+    font-size: 15px;
+  }
+  .drink-list-card li {
+    font-size: 12px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<main class="page">
+
+  <!--
+    クリスマス装飾
+    画像は使用していません
+  -->
+
+  <div class="decor top-left">
+    ✦ ❄
+  </div>
+
+  <div class="decor top-right">
+    ❧ ✧
+  </div>
+
+  <div class="decor bottom-left">
+    ✧ ❄
+  </div>
+
+  <div class="decor bottom-right">
+    ❄ ✦
+  </div>
+
+
+  <!-- =========================
+       タイトル
+  ========================== -->
+
+  <header>
+
+    <div class="eyebrow">
+      Christmas Wedding
+    </div>
+
+    <h1>
+      Cocktail Menu
+    </h1>
+
+    <div class="ornament">
+      <span>❧　✦　❧</span>
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       カクテル
+  ========================== -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Cocktail
+    </h2>
+
+
+    <!-- バイオレットフィズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/violet-fizz.jpg"
+            alt="バイオレットフィズ"
+          >
+        
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">バイオレットフィズ</div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          すみれのような香りと色合いに、
+          ジンの引き締まった味わいのカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- シーブリーズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/sea-breeze.jpg"
+            alt="シーブリーズ"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">シーブリーズ</div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          グレープフルーツとクランベリーの、
+          さっぱりと甘いカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- イングリッシュローズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/english-rose.jpg"
+            alt="イングリッシュローズ"
+          >
+        
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">イングリッシュローズ</div>
+
+          <div class="taste">
+            甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          薔薇の華やかな香りと甘みが、
+          大人にぴったりなカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ジントニック -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/gin-tonic.jpg"
+            alt="ジントニック"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">ジントニック</div>
+
+          <div class="taste">
+            やや辛口
+          </div>
+
+        </div>
+
+        <div class="description">
+          すっきりとした苦味と、
+          爽快な香り
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- エターナル -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/eternal.jpg"
+            alt="エターナル 永遠のふたり"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">エターナル　永遠のふたり</div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          白ワインの微炭酸で、
+          爽やかな味わいのカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =========================
+       ノンアルコール
+  ========================== -->
+
+  <section class="section">
+
+    <h2 class="section-title">
+      Non-Alcoholic Cocktail
+    </h2>
+
+
+    <!-- アーモンドとミルク -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/almond-milk.jpg"
+            alt="アーモンドとミルクのマリアージュ"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">アーモンドとミルクのマリアージュ</div>
+
+          <div class="taste">
+            超甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          アーモンドとミルクを使った
+          杏仁ミルク風カクテル。
+          デザート気分にぴったり
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ティアラ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/tiara.jpg"
+            alt="ティアラ"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">ティアラ</div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          見た目が綺麗な、
+          シャンパン風白ブドウのジュース
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ハニーストーン -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/honey-stone.jpg"
+            alt="ハニーストーン"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">ハニーストーン</div>
+
+          <div class="taste">
+            超甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          パイナップルとパッションフルーツの
+          トロピカルドリンク
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- フローラルビレッジ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/floral-village.jpg"
+            alt="フローラルビレッジ"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">フローラルビレッジ</div>
+
+          <div class="taste">
+            さっぱり
+          </div>
+
+        </div>
+
+        <div class="description">
+          レモンの爽やかな酸味のカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- フランボワーズ -->
+
+    <article class="menu-item">
+
+      <div class="drink-photo">
+
+          <img
+            src="images/framboise-hot.jpg"
+            alt="フランボワーズのホットカクテル"
+          >
+
+      </div>
+
+
+      <div>
+
+        <div class="name-row">
+
+          <div class="name" role="button" tabindex="0">フランボワーズのホットカクテル</div>
+
+          <div class="taste">
+            HOT・やや甘口
+          </div>
+
+        </div>
+
+        <div class="description">
+          ラズベリーの果実を使った、
+          温かく甘酸っぱいカクテル
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
+
+
+  <!-- =========================
+       ドリンクメニュー（画像の内容を追加）
+  ========================== -->
+  <section class="drink-list-section" aria-label="ドリンクメニュー">
+    <h2 class="drink-list-heading">Alcoholic Drinks</h2>
+    <div class="drink-list-grid">
+      <div class="drink-list-card">
+        <h3>ビール・日本酒・梅酒</h3>
+        <ul>
+          <li><strong>ビール</strong>キリン一番搾り</li>
+          <li class="subitem">キリン ハートランド</li>
+          <li><strong>日本酒</strong>久保田 千寿</li>
+          <li class="subitem">吟醸酒・相模灘 純米吟醸</li>
+          <li><strong>梅酒</strong>八海山の梅酒</li>
+        </ul>
+      </div>
+      <div class="drink-list-card">
+        <h3>焼酎・ウイスキー・ブランデー</h3>
+        <ul>
+          <li><strong>芋焼酎</strong>吉兆宝山</li>
+          <li><strong>麦焼酎</strong>うすは音</li>
+          <li><strong>ウイスキー</strong>マッカーサー、スコッチ</li>
+          <li><strong>ブランデー</strong>シェバリエ・アポロン・ナポレオン</li>
+        </ul>
+      </div>
+      <div class="drink-list-card">
+        <h3>ワイン</h3>
+        <ul>
+          <li><strong>ボルドーワイン</strong>赤・白</li>
+        </ul>
+      </div>
+      <div class="drink-list-card">
+        <h3>カクテル</h3>
+        <ul>
+          <li>エターナル</li>
+          <li>イングリッシュローズ</li>
+          <li>バイオレットフィズ</li>
+          <li>ジントニック</li>
+          <li>シーブリーズ</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="drink-list-heading" style="margin-top: 38px;">Non-Alcoholic Drinks</h2>
+    <div class="drink-list-grid">
+      <div class="drink-list-card">
+        <h3>オリジナルノンアルコールカクテル</h3>
+        <ul>
+          <li class="gift">プレゼント 🎁</li>
+        </ul>
+        <h3 style="margin-top: 16px;">ノンアルコールビール</h3>
+        <ul>
+          <li>アサヒ ドライゼロ</li>
+        </ul>
+      </div>
+      <div class="drink-list-card">
+        <h3>ノンアルコールカクテル</h3>
+        <ul>
+          <li>ティアラ</li>
+          <li>ハニーストーン</li>
+          <li>フローラルビレッジ</li>
+          <li>アーモンドとミルクのマリアージュ</li>
+          <li>フランボワーズのホットカクテル</li>
+        </ul>
+      </div>
+      <div class="drink-list-card">
+        <h3>ソフトドリンク</h3>
+        <ul>
+          <li>マンゴージュース</li>
+          <li>りんごジュース</li>
+          <li>オレンジジュース</li>
+          <li>ジンジャーエール</li>
+          <li>ウーロン茶</li>
+          <li>ミネラルウォーター</li>
+          <li>スパークリングウォーター</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    May your Christmas be filled with
+    love, joy &amp; beautiful memories.
+
+    <br>
+
+    <span>
+      — With warmest wishes on your wedding day —
+    </span>
+
+  </footer>
+
+
+
+  <!-- =========================
+       画像・説明の拡大モーダル
+       ========================== -->
+  <div class="image-modal" id="imageModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" type="button" aria-label="閉じる">×</button>
+
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <div class="modal-image-wrap">
+        <img class="modal-image" id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-ornament">✦　❧　✦</div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-description" id="modalDescription"></div>
+    </div>
+  </div>
+
+</main>
+
+
+<script>
+(() => {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalName = document.getElementById("modalName");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalClose = document.getElementById("modalClose");
+
+  function openModal(nameElement) {
+    const item = nameElement.closest(".menu-item");
+    if (!item) return;
+
+    const image = item.querySelector(".drink-photo img");
+    const description = item.querySelector(".description");
+
+    if (!image) return;
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt || nameElement.textContent.trim();
+    modalName.textContent = nameElement.textContent.trim();
+    modalDescription.textContent = description
+      ? description.textContent.replace(/\s+/g, " ").trim()
+      : "";
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".name").forEach((name) => {
+    name.addEventListener("click", () => openModal(name));
+
+    name.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openModal(name);
+      }
+    });
+  });
+
+  // メニュー内の小さい画像をクリックしても拡大表示
+  document.querySelectorAll(".drink-photo img").forEach((image) => {
+    image.style.cursor = "zoom-in";
+    image.addEventListener("click", () => {
+      const item = image.closest(".menu-item");
+      const name = item ? item.querySelector(".name") : null;
+      if (name) openModal(name);
+    });
+  });
+
+  modalClose.addEventListener("click", closeModal);
+
+  // 背景部分をクリックして閉じる
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
+<!-- GitHub Pages redeploys -->
